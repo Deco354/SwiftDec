@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  background-color: tomato;
+  color: white;
+  text-align: center;
+  padding: 10px 0px;
+}
+
+.blog-title {
+  font-family: "Playball", cursive;
+  font-size: 64px;
+  margin-bottom: 10px;
+}
+
+.blog-description {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+}
+
+.h1, .h2, .h3 {
+  font-family: "Playfair Display", serif;
+}
