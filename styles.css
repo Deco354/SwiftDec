@@ -4,11 +4,17 @@
   box-sizing: border-box;
 }
 
-.header {
+.home-page {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.home-banner {
   background-color: tomato;
   color: white;
   text-align: center;
   padding: 10px 0px;
+  width: 100%;
 }
 
 .blog-title {
