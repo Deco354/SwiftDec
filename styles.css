@@ -41,6 +41,10 @@ h1, h2, h3 {
 }
 
 .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
   width: 100%;
   padding-left: 15px;
   padding-right: 15px;
@@ -86,14 +90,14 @@ h1, h2, h3 {
   color: gray;
 }
 
-@media only screen and (min-width: 401px) and (max-width: 960px) {
-    body {
-      background-color: yellow;
+@media only screen and (min-width: 640px) and (max-width: 960px) {
+    .blog-post {
+      width: calc(50% - 20px);
     }
 }
 
 @media only screen and (min-width: 961px) {
-  body {
-    background-color: blue;
+  .blog-post {
+    width: calc(33.5% - 40px);
   }
 }
