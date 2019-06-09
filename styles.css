@@ -96,12 +96,18 @@ h1, h2, h3 {
     }
 }
 
-@media only screen and (min-width: 961px) {
+@media only screen and (min-width: 961px) and (max-width: 1200px) {
   .blog-post {
-    width: 30%;
+    width: calc(33.5% - 40px);
+  }
+}
+
+@media only screen and (min-width: 1201px) {
+  .container {
+    width: 1200px;
   }
 
-  .container {
-    width: 960px;
+  .blog-post {
+    width: calc(33.5% - 40px);
   }
 }
