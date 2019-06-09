@@ -9,6 +9,7 @@ body {
   font-size: 16px;
   display: flex;
   flex-wrap: wrap;
+  background-color: whitesmoke
 }
 
 h1, h2, h3 {
@@ -37,7 +38,6 @@ h1, h2, h3 {
 .blog-post-list {
   width: 100%;
   padding-top: 20px;
-  background-color: whitesmoke;
 }
 
 .container {
@@ -98,6 +98,10 @@ h1, h2, h3 {
 
 @media only screen and (min-width: 961px) {
   .blog-post {
-    width: calc(33.5% - 40px);
+    width: 30%;
+  }
+
+  .container {
+    width: 960px;
   }
 }
