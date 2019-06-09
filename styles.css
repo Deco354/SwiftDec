@@ -4,23 +4,15 @@
   box-sizing: border-box;
 }
 
-.body {
+body {
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
-}
-
-.home-page {
   display: flex;
   flex-wrap: wrap;
 }
 
-.h1, .h2, .h3 {
+h1, h2, h3 {
   font-family: "Playfair Display", serif;
-}
-
-.home-page {
-  display: flex;
-  flex-wrap: wrap;
 }
 
 .home-banner {
