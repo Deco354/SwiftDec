@@ -10,10 +10,23 @@ body {
   display: flex;
   flex-wrap: wrap;
   background-color: whitesmoke
+  line-height: 1.8em;
 }
 
 h1, h2, h3 {
   font-family: "Playfair Display", serif;
+}
+
+article h1, article h2 {
+  display: block;
+  text-align: center;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+}
+
+p, ul {
+  display: block;
+  margin-bottom: 1.5em;
 }
 
 .home-banner {
