@@ -29,6 +29,11 @@ p, ul {
   margin-bottom: 1.5em;
 }
 
+ul, ol {
+  margin-left: 0.75em;
+  text-align: left;
+}
+
 .home-banner {
   background-color: tomato;
   color: white;
