@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Unit Testing</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="swift-code.css">
 
   <link href="https://fonts.googleapis.com/css?family=Montserrat|Playball|Playfair+Display:700" rel="stylesheet">
 </head>
@@ -80,9 +81,54 @@
       private helper functions</p>
 
     <h4>Don't</h4>
-    <script src="https://gist.github.com/Deco354/9415a42bc6b17fbae38876e4f9aae3f9.js"></script>
+    <pre>
+      <code>
+<span class="keyword">func</span> testAddMonths() {
+    <span class="keyword">let</span> may31 = <span class="type">SwiftyDate</span>(day: <span class="number">31</span>, month: <span class="number">5</span>, year: <span class="number">2019</span>)
+
+    <span class="keyword">let</span> addMonthResult = may31.<span class="call">addMonths</span>(<span class="number">1</span>)
+    <span class="call">XCTAssertEqual</span>(addMonthResult.<span class="property">day</span>, <span class="number">30</span>)
+    <span class="call">XCTAssertEqual</span>(addMonthResult.<span class="property">month</span>, <span class="number">6</span>)
+    <span class="call">XCTAssertEqual</span>(addMonthResult.<span class="property">year</span>, <span class="number">2019</span>)
+
+    <span class="keyword">let</span> addMonthResult2 = may31.<span class="call">addMonth</span>(<span class="number">2</span>)
+    <span class="call">XCTAssertEqual</span>(addMonthResult2.<span class="property">day</span>, <span class="number">31</span>)
+    <span class="call">XCTAssertEqual</span>(addMonthResult2.<span class="property">month</span>, <span class="number">7</span>)
+    <span class="call">XCTAssertEqual</span>(addMonthResult2.<span class="property">year</span>, <span class="number">2019</span>)
+
+    <span class="keyword">let</span> june30 = <span class="type">SwiftyDate</span>(day: <span class="number">30</span>, month: <span class="number">6</span>, year: <span class="number">2019</span>)
+    <span class="keyword">let</span> addMonthResult3 = june30.<span class="call">addMonths</span>(<span class="number">1</span>)
+    <span class="call">XCTAssertEqual</span>(addMonthResult3.<span class="property">day</span>, <span class="number">30</span>)
+    <span class="call">XCTAssertEqual</span>(addMonthResult3.<span class="property">month</span>, <span class="number">7</span>)
+    <span class="call">XCTAssertEqual</span>(addMonthResult3.<span class="property">year</span>, <span class="number">2019</span>)
+ }
+</code>
+</pre>
     <h4>Do</h4>
-    <script src="https://gist.github.com/Deco354/406790ab3a097d2c4a5c55af016977a7.js"></script>
+    <pre>
+      <code>
+        <span class="keyword">func</span> testDay31To30DayMonthJump() {
+    <span class="keyword">let</span> addMonthResult = may31.<span class="call">addMonths</span>(<span class="number">1</span>)
+    <span class="call">XCTAssertEqual</span>(addMonthResult.<span class="property">day</span>, <span class="number">30</span>)
+    <span class="call">XCTAssertEqual</span>(addMonthResult.<span class="property">month</span>, <span class="number">6</span>)
+    <span class="call">XCTAssertEqual</span>(addMonthResult.<span class="property">year</span>, <span class="number">2019</span>)
+}
+
+<span class="keyword">func</span> test31st2MonthJumpThroughA30DayMonth() {
+    <span class="keyword">let</span> addMonthResult = may31.<span class="call">addMonths</span>(<span class="number">2</span>)
+    <span class="call">XCTAssertEqual</span>(addMonthResult.<span class="property">day</span>, <span class="number">31</span>)
+    <span class="call">XCTAssertEqual</span>(addMonthResult.<span class="property">month</span>, <span class="number">7</span>)
+    <span class="call">XCTAssertEqual</span>(addMonthResult.<span class="property">year</span>, <span class="number">2019</span>)
+}
+
+<span class="keyword">func</span> testDay30To31DayMonthJump() {
+    <span class="keyword">let</span> addMonthResult = june30.<span class="call">addMonths</span>(<span class="number">1</span>)
+    <span class="call">XCTAssertEqual</span>(addMonthResult.<span class="property">day</span>, <span class="number">30</span>)
+    <span class="call">XCTAssertEqual</span>(addMonthResult.<span class="property">month</span>, <span class="number">7</span>)
+    <span class="call">XCTAssertEqual</span>(addMonthResult.<span class="property">year</span>, <span class="number">2019</span>)
+}
+</code>
+</pre>
     <h2>Enable Test Coverage</h2>
     <p>Using a coverage tool allows you to immediately see gaps in your testing strategy.
       <br>
