@@ -29,6 +29,10 @@ p, ul, blockquote {
   margin-bottom: 1.5em;
 }
 
+.container pre {
+  width: 100%;
+}
+
 ul, ol {
   margin-left: 0.75em;
   text-align: left;

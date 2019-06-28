@@ -35,7 +35,8 @@
       have little to no coverage in their projects.
       Yet having good coverage is vital to having a maintainable project.</p>
     <blockquote>"Unit tests keep our code flexible, maintainable and reusable. Without them every change is a
-      possible bug."<footer>Uncle Bob - <cite>Clean Code</cite></footer></blockquote>
+      possible bug."<footer>Uncle Bob - <cite>Clean Code</cite></footer>
+    </blockquote>
 
 
     <p>Over the coming series of blog posts I will attempt to cover the questions above when it comes to unit
@@ -107,7 +108,7 @@
     <h4>Do</h4>
     <pre>
       <code>
-        <span class="keyword">func</span> testDay31To30DayMonthJump() {
+<span class="keyword">func</span> testDay31To30DayMonthJump() {
     <span class="keyword">let</span> addMonthResult = may31.<span class="call">addMonths</span>(<span class="number">1</span>)
     <span class="call">XCTAssertEqual</span>(addMonthResult.<span class="property">day</span>, <span class="number">30</span>)
     <span class="call">XCTAssertEqual</span>(addMonthResult.<span class="property">month</span>, <span class="number">6</span>)
