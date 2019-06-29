@@ -7,30 +7,29 @@
 body {
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
-  display: flex;
-  flex-wrap: wrap;
-  background-color: whitesmoke
-  line-height: 1.8em;
 }
 
 h1, h2, h3, h4 {
   font-family: "Playfair Display", serif;
 }
 
-article h1, article h2 {
-  display: block;
-  text-align: center;
-  margin-block-start: 0.83em;
-  margin-block-end: 0.83em;
+article h1 {
+  font-size: 1.8em;
+  margin-bottom: 0.83em;
+  margin-top: 0.83em;
+}
+
+article h2, article h3 {
+  margin-bottom: 0.4em;
+}
+
+article h4, article h5 {
+  margin-bottom: 0.1em;
 }
 
 p, ul, blockquote {
   display: block;
   margin-bottom: 1.5em;
-}
-
-.container pre {
-  width: 100%;
 }
 
 ul, ol {
@@ -60,18 +59,18 @@ ul, ol {
 .blog-post-list {
   width: 100%;
   padding-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-
   width: 100%;
   padding-left: 15px;
   padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
+}
+
+.container pre {
+  width: 100%;
 }
 
 .blog-post {
