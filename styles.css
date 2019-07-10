@@ -16,7 +16,11 @@ h1, h2, h3, h4 {
 article h1 {
   font-size: 1.8em;
   margin-bottom: 0.83em;
-  margin-top: 0.83em;
+  text-align: center;
+}
+
+header address {
+  display: inline;
 }
 
 article h2, article h3 {
@@ -103,12 +107,29 @@ ul, ol {
   font-size: 14px;
 }
 
-.blog-post, time {
+.blog-post time {
   grid-column: 2;
   grid-row: 2;
   font-size: 11px;
   line-height: 18px;
   color: gray;
+}
+
+article header {
+  padding-top:
+}
+
+.date-stamp {
+  color: gray;
+  font-size: 0.7em;
+  text-decoration: none;
+  text-align: center;
+}
+.date-stamp a {
+  text-decoration: none;
+  color: gray;
+  font-size: 1em;
+  font-style: normal;
 }
 
 img {
