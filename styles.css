@@ -76,7 +76,7 @@ ul, ol {
 }
 
 .container pre {
-  width: 100%;
+  width: 18.3em;
 }
 
 .blog-post {
@@ -117,10 +117,6 @@ ul, ol {
   color: gray;
 }
 
-article header {
-  padding-top:
-}
-
 .date-stamp {
   color: gray;
   font-size: 0.7em;
@@ -156,20 +152,34 @@ blockquote footer {
     .blog-post {
       width: calc(50% - 20px);
     }
+
+    .container pre {
+      font-size: 1.75rem;
+    }
 }
 
 @media only screen and (min-width: 961px) and (max-width: 1200px) {
+
   .blog-post {
     width: calc(33.5% - 40px);
+  }
+
+  .container pre {
+    font-size: 1.85rem;
   }
 }
 
 @media only screen and (min-width: 1201px) {
+
   .container {
     width: 1200px;
   }
 
   .blog-post {
     width: calc(33.5% - 40px);
+  }
+
+  .container pre {
+    font-size: 2rem;
   }
 }
