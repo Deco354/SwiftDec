@@ -1,5 +1,4 @@
 * {
-  margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
@@ -11,6 +10,10 @@ body {
 
 h1, h2, h3, h4 {
   font-family: "Playfair Display", serif;
+}
+
+h1 {
+  margin-top: 0;
 }
 
 article h1 {
@@ -81,6 +84,8 @@ ul, ol {
 
 .container pre {
   width: 18.3em;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .blog-post {
@@ -134,8 +139,20 @@ ul, ol {
   font-style: normal;
 }
 
+figure {
+  margin-bottom: 2em;
+}
+
+figcaption {
+  font-weight: bold;
+  font-size: 14px;
+  color: grey;
+  text-align: center;
+}
+
 img {
   max-width: 100%;
+
 }
 
 blockquote {

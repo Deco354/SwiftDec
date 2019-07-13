@@ -23,8 +23,8 @@
         <time datetime="2019-06-29">Jun 29th 2019</time> -
         <address class="author"><a rel="author" href="">Declan McKenna</a></address>
       </div>
-        <h1>Unit Testing <br class="responsive-break">
-          Best Practices</h1>
+      <h1>Unit Testing <br class="responsive-break">
+        Best Practices</h1>
     </header>
     <p>When I first learnt how to unit test I looked up a tutorial showing me how to write a test for a simple model
       and it seemed pretty straight forward. When I tried to apply what I learnt in my project I soon encountered a lot
@@ -87,8 +87,8 @@
       give clearer failure results. Any repetitive setup involved in doing this can be handled by <code>setup()</code> or
       private helper functions</p>
 
-    <h4>Don't</h4>
-    <pre>
+    <figure>
+      <pre>
       <code>
 <span class="keyword">func</span> testAddMonths() {
     <span class="keyword">let</span> may31 = <span class="type">SwiftyDate</span>(day: <span class="number">31</span>, month: <span class="number">5</span>, year: <span class="number">2019</span>)
@@ -111,8 +111,10 @@
  }
 </code>
 </pre>
-    <h4>Do</h4>
-    <pre>
+      <figcaption>Bad: Three different scenarios bundled it to one test</figcaption>
+    </figure>
+    <figure>
+      <pre>
       <code>
 <span class="keyword">func</span> testDay31To30DayMonthJump() {
     <span class="keyword">let</span> addMonthResult = may31.<span class="call">addMonths</span>(<span class="number">1</span>)
@@ -136,20 +138,24 @@
 }
 </code>
 </pre>
+      <figcaption>Good: Tests split up for different scenarios</figcaption>
+    </figure>
     <h2>Enable Test Coverage</h2>
-    <p>Using a coverage tool allows you to immediately see gaps in your testing strategy.
-      <br>
+    <p>Using a coverage tool allows you to immediately see gaps in your testing strategy.<br>
       Xcode has a built in coverage tool which at the time of writing is not enabled by default.
-      Enable it by going to your scheme (to the right of the stop button) -> edit schemes -> Test ->
-      Options and check “Gather coverage”.</p>
-    <img src="images/unit-testing-best-practices/scheme-screenshot.png" alt="Scheme settings screenshot">
-    <br>
-    <p>Once this is enabled you can view your projects coverage within the reports tab <em>(command - 9)</em></p>
-    <img src="images/unit-testing-best-practices/coverage-screenshot.png" alt="Test coverage report screenshot">
-    <br>
-    <p>Better yet Xcode will even highlight untested functions with a red border as seen below.</p>
-    <img src="images/unit-testing-best-practices/untested-highlighting-screenshot.png" alt="XCode untested code highlighting screenshot">
-
+    </p>
+    <figure>
+      <img src="images/unit-testing-best-practices/scheme-screenshot.png" alt="Scheme settings screenshot">
+      <figcaption>Enable code coverage by going to your scheme -> <em>edit schemes -> Test -> Options</em> and check <em>Gather coverage</em></figcaption>
+    </figure>
+    <figure>
+      <img src="images/unit-testing-best-practices/coverage-screenshot.png" alt="Test coverage report screenshot">
+      <figcaption>View your projects coverage within the reports tab <em>cmd-9</em></figcaption>
+    </figure>
+    <figure>
+      <img src="images/unit-testing-best-practices/untested-highlighting-screenshot.png" alt="Xcode untested code highlighting screenshot">
+      <figcaption>Xcode will highlight untested functions with a red margin</figcaption>
+    </figure>
     <h2>Setup Continuous Integration</h2>
     <p>Tools such as Jenkins or Travis can run your tests when someone makes a Pull Request and automatically block the PR
       if the tests failed. This is a vital tool to have as without it it’s possible to merge branches with failing tests.
