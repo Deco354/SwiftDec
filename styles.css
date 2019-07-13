@@ -75,6 +75,10 @@ ul, ol {
   margin-right: auto;
 }
 
+.blog-article {
+  max-width: 800px;
+}
+
 .container pre {
   width: 18.3em;
 }
