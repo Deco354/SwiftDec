@@ -26,18 +26,19 @@
       <h1>Unit Testing <br class="responsive-break">
         Best Practices</h1>
     </header>
-    <p>When I first learnt how to unit test I looked up a tutorial showing me how to write a test for a simple model
-      and it seemed pretty straight forward. When I tried to apply what I learnt in my project I soon encountered a lot
-      of difficulties.</p>
+    <p>When I first learnt how to unit test every tutorial I came across would show me how to write a test for a simple model
+      and it seemed pretty straight forward.</p>
+      <p>When I tried to apply what I learnt in my project I soon encountered a lot
+      of difficulties when trying to test:</p>
     <ul>
-      <li>How do I test ViewControllers?</li>
-      <li>How do I test private functions?</li>
-      <li>How do I test static functions?</li>
-      <li>How do I test network calls?</li>
-      <li>How do I test UserDefaults?</li>
-      <li>How do I make my class testable?</li>
+      <li>ViewControllers</li>
+      <li>Private functions</li>
+      <li>Static functions</li>
+      <li>Network calls</li>
+      <li>UserDefaults</li>
+      <li>"Legacy code"</li>
     </ul>
-    <p>Unit testing isn’t nearly as simple as most tutorials make out and it’s one of the main reasons so many teams
+    <p>Unit testing isn’t nearly as simple as it first appears. I feel this is one of the main reasons so many teams
       have little to no coverage in their projects.
       Yet having good coverage is vital to having a maintainable project.</p>
     <blockquote>"Unit tests keep our code flexible, maintainable and reusable. Without them every change is a
@@ -46,45 +47,67 @@
 
 
     <p>Over the coming series of blog posts I will attempt to cover the questions above when it comes to unit
-      testing in Xcode. In this article I’ll broach some overarching concepts mostly taken from Robert Martin’s
+      testing in Xcode.</p>
+      <p>For now we will go over some overarching concepts I have found very useful mostly taken from Robert Martin’s
       excellent book <cite>Clean Code</cite>.</p>
+
     <h2>F.I.R.S.T</h2>
     <p>All tests should follow the FIRST principles</p>
+
     <h3>Fast</h3>
-    <p>We want to run these tests regularly and often by smashing command U whenever we’ve made changes or we're
-      about to commit our work. For this to work we need our tests to be fast. How fast is fast? We’re going to be
-      writing a lot of tests so at the very minimum a test should be under 0.1 seconds.</p>
+    <p>We want to run these tests regularly and often by smashing <em>command U</em> whenever we’ve made changes or we're
+      about to commit our work.</p>
+      <p>For this to work we need our tests to be fast.
+      <br>How fast is fast? We’re going to be
+      writing a lot of tests so at the very minimum a test should run in less than 0.1 seconds.</p>
+
     <h3>Independent</h3>
-    <p>Don’t write tests that depend on each other.
-      Xcode actively helps us with this, every function in an XCTestCase class that begins with “test” will receive a
-      new instance of your test class so no variables can be carried over.
-      <code>setup()</code> and <code>teardown()</code> can be used to clear persistent resources but it would be better
-      still to mock them. You should be able to run your tests in any order and have them pass.</p>
+    <p>Don’t write tests that depend on each other.</p>
+      <p>Xcode actively helps us with this. Every function in an XCTestCase class that begins with “test” will receive a
+      new instance of your test class so no instance variables will be carried over.</p>
+
+      <p><code>setup()</code> and <code>teardown()</code> can be used to clear persistent resources but it would be better
+      still to mock them. </p>
+
+      <p>You should be able to run your tests in any order and have them pass.</p>
 
     <h3>Repeatable</h3>
-    <p>Tests should run on any environment. If your unit tests only work on your laptop, your companies VPN or with a
+    <p>Tests should run on any environment.</p>
+    <p>If your unit tests only work on your laptop, your companies VPN or with a
       network connection they can’t be run reliably and your team will second guess why they’ve failed or ignore them.</p>
 
     <h3>Self-Validating</h3>
-    <p>Tests should simply fail or pass and not rely on a log.
-      <br>
+    <p>Tests should simply fail or pass and not rely on a log.</p>
+
+    <p>
       I slipped up on this point when writing one of my first “unit tests” which tested the parsing of phone numbers from
       email text. It had a giant log with the % of phone numbers we parsed alongside a print out of all the ones which had
-      failed and a spreadsheet I’d keep up to date the results for each version of our app.</p>
+      failed and a spreadsheet I’d keep up to date with the results for each version of our app.</p>
+
+      <p>This was an unnecessary manual process which made the tests unmaintainable and required inside
+        knowledge to utilize</p>
+        <p>If these tests had been written individually the name of the test would immediately tell the user
+        what had broke.</p>
 
     <h3>Timely</h3>
-    <p>Write them with, or better yet before your code. If you do it after your production code may be difficult to test.</p>
+    <p>Write tests with all code you commit.</p>
+      <p>If you do it afterwards your production code may be difficult to test especially once more functionality is added to it</p>
 
     <h2>Clean Tests</h2>
 
-    <p>Do not adopt a dual standard where readability is neglected for tests. As your code changes your tests will have to
-      change people who did not initially write them will have to understand them so that they can adapt them, extend them
-      or remove tests that are no longer relevant without losing coverage. XCTest classes can and should have instance
+    <p>Do not adopt a dual standard where readability is neglected for tests.</p>
+
+    <p>As your code changes your tests will have to
+      change. People who did not initially write them will have to understand them so that they can adapt, extend,
+      or remove them.</p>
+
+      <p>XCTest classes can and should have instance
       variables and helper functions to enhance readability and reduce repetition.</p>
 
     <h2>Smaller Tests</h2>
-    <p>Minimize the number of asserts and test just one concept per test function. Smaller tests are easier to read and
-      give clearer failure results. Any repetitive setup involved in doing this can be handled by <code>setup()</code> or
+    <p>Minimize the number of asserts and test just one concept per test function.</p>
+    <p>Smaller tests are easier to read and give clearer failure results.
+      Any repetitive setup involved in doing this can be handled by <code>setup()</code> or
       private helper functions</p>
 
     <figure>
@@ -111,7 +134,7 @@
  }
 </code>
 </pre>
-      <figcaption>Bad: Three different scenarios bundled it to one test</figcaption>
+      <figcaption>Bad: Three different scenarios bundled in to one test</figcaption>
     </figure>
     <figure>
       <pre>
@@ -140,9 +163,10 @@
 </pre>
       <figcaption>Good: Tests split up for different scenarios</figcaption>
     </figure>
+
     <h2>Enable Test Coverage</h2>
-    <p>Using a coverage tool allows you to immediately see gaps in your testing strategy.<br>
-      Xcode has a built in coverage tool which at the time of writing is not enabled by default.
+    <p>Using a coverage tool allows you to immediately see gaps in your testing strategy.</p>
+      <p>Xcode has a built in coverage tool which at the time of writing is not enabled by default.
     </p>
     <figure>
       <img src="images/unit-testing-best-practices/scheme-screenshot.png" alt="Scheme settings screenshot">
@@ -158,19 +182,27 @@
     </figure>
     <h2>Setup Continuous Integration</h2>
     <p>Tools such as Jenkins or Travis can run your tests when someone makes a Pull Request and automatically block the PR
-      if the tests failed. This is a vital tool to have as without it it’s possible to merge branches with failing tests.
+      if the tests failed.</p>
+      <p>This is a vital tool to have as without it it’s possible to merge branches with failing tests.
       If tests can be ignored then there’s no point in having them.</p>
 
     <h2>Test Behaviours rather than functions</h2>
-    <p>As nice as it is to have a test coverage tool you often need to do much more than just test that the function works
-      under normal conditions. Push it to the limit and put edge cases in which will really push your code to the limit.
-      The date tests above are a good example of this.</p>
+    <p>Just because a function has test coverage doesn't mean it's fully tested.</p>
+      <p>Push your code to the limit and write tests for every edge case you can think of. It's better to have too
+        many tests than too few.
+
+      <p>The date tests above are a good example of this.</p>
+      <p>One test for <code>addMonths()</code> will satisfy code coverage tools that the function is tested but there is
+      far more behaviour to be tested. For example what date do we land on when we add one month to January 30th?</p>
 
     <h2>Conclusion</h2>
     <p>Testing isn’t as straight forward as most tutorials will tell you, this article doesn’t come close to covering all
-      the difficulties you can potentially face either. It’s one of the most important skills you can learn, is universally
+      the difficulties you can potentially face either.</p>
+      <p>However it’s one of the most important skills you can learn. It is universally
       needed across all languages and platforms and is probably the easiest tell tale sign of picking out the good devs
-      from the great devs. Stay tuned and we’ll have more articles diving in to testing in more detail in the coming
+      from the great devs.</p>
+
+      <p>Stay tuned and we’ll have more articles diving in to testing in more detail in the coming
       weeks.</p>
 
   </article>
