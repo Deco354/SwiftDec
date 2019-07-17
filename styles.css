@@ -89,12 +89,6 @@ ul, ol {
   max-width: 800px;
 }
 
-.container pre {
-  width: 18.3em;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .blog-post {
   width: 100%;
   display: grid;
@@ -177,27 +171,29 @@ blockquote footer {
   margin-top: 1em;
 }
 
+.container pre {
+  width: calc(100% - 10px);
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 2.45vw;
+}
+
+/* IPads */
 @media only screen and (min-width: 640px) and (max-width: 960px) {
     .blog-post {
       width: calc(50% - 20px);
     }
-
-    .container pre {
-      font-size: 2.8rem;
-    }
 }
 
+/* Low res desktops/laptops and iPad Pros */
 @media only screen and (min-width: 961px) and (max-width: 1200px) {
 
   .blog-post {
     width: calc(33.5% - 40px);
   }
-
-  .container pre {
-    font-size: 3rem;
-  }
 }
 
+/* High res desktops */
 @media only screen and (min-width: 1201px) {
 
   .container {
@@ -207,8 +203,10 @@ blockquote footer {
   .blog-post {
     width: calc(33.5% - 40px);
   }
+}
 
+@media only screen and (min-width: 820px) {
   .container pre {
-    font-size: 3.2rem;
+    font-size: 22px;
   }
 }
