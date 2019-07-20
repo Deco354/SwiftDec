@@ -104,6 +104,7 @@ ul, ol {
   grid-template-columns: 90px auto;
   grid-template-rows: auto 24px;
   column-gap: 20px;
+  text-decoration: none;
 }
 
 .blog-post-image {
