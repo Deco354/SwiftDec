@@ -63,6 +63,11 @@ ul, ol {
   width: 100%;
 }
 
+.home-banner a {
+  color: inherit;
+  text-decoration: none;
+}
+
 .blog-title {
   font-family: "Playball", cursive;
   font-size: 6.4rem;
@@ -104,6 +109,7 @@ ul, ol {
   grid-template-columns: 90px auto;
   grid-template-rows: auto 24px;
   column-gap: 20px;
+  text-decoration: none;
 }
 
 .blog-post-image {
