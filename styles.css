@@ -63,6 +63,11 @@ ul, ol {
   width: 100%;
 }
 
+.home-banner a {
+  color: inherit;
+  text-decoration: none;
+}
+
 .blog-title {
   font-family: "Playball", cursive;
   font-size: 6.4rem;
