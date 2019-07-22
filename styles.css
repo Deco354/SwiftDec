@@ -85,6 +85,7 @@ ul, ol {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
+  max-width: 1200px;
 }
 /* ----- */
 .blog-post-list {
@@ -199,7 +200,6 @@ blockquote footer {
 
 /* Low res desktops/laptops and iPad Pros */
 @media only screen and (min-width: 961px) and (max-width: 1200px) {
-
   .blog-post {
     width: calc(33.5% - 40px);
   }
@@ -207,11 +207,6 @@ blockquote footer {
 
 /* High res desktops */
 @media only screen and (min-width: 1201px) {
-
-  .container {
-    width: 1200px;
-  }
-
   .blog-post {
     width: calc(33.5% - 40px);
   }
