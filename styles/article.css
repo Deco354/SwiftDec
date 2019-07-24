@@ -79,14 +79,6 @@ blockquote footer {
 }
 
 .container pre {
-  width: calc(100% - 10px);
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
   font-size: 2.45vw;
-}
-
-@media only screen and (min-width: 820px) {
-  .container pre {
-    font-size: 22px;
-  }
 }
