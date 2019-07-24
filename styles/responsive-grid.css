@@ -1,0 +1,31 @@
+.responsive-grid {
+  width: 100%;
+  padding-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.responsive-grid--item {
+  width: 100%;
+}
+
+/* IPads */
+@media only screen and (min-width: 640px) and (max-width: 960px) {
+    .responsive-grid--item {
+      width: calc(50% - 20px);
+    }
+}
+
+/* Low res desktops/laptops and iPad Pros */
+@media only screen and (min-width: 961px) and (max-width: 1200px) {
+  .responsive-grid--item {
+    width: calc(33.5% - 40px);
+  }
+}
+
+/* High res desktops */
+@media only screen and (min-width: 1201px) {
+  .responsive-grid--item {
+    width: calc(33.5% - 40px);
+  }
+}
