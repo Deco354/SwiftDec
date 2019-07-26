@@ -58,3 +58,10 @@ pre code .dotAccess {
 pre code .preprocessing {
     color: #b68a00;
 }
+
+/* Cap max font size */
+@media only screen and (min-width: 820px) {
+  .container pre {
+    font-size: 22px;
+  }
+}
