@@ -1,4 +1,4 @@
-name: My Jekyll Website
+name: Swifty
 kramdown:
   input: GFM
   auto_ids: true
