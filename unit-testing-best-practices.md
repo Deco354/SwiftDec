@@ -32,7 +32,7 @@ excellent book Clean Code.
 All tests should follow the FIRST principles
 
 ### Fast
-We want to run these tests regularly and often by smashing <em>command U</em> whenever we’ve made changes or we're
+We want to run these tests regularly and often by smashing <kbd>command U</kbd> whenever we’ve made changes or we're
 about to commit our work.
 
 For this to work we need our tests to be fast.
@@ -151,7 +151,7 @@ Xcode has a built in coverage tool which at the time of writing is not enabled b
 </figure>
 <figure>
   <img src="images/unit-testing-best-practices/coverage-screenshot.png" alt="Test coverage report screenshot">
-  <figcaption>View your projects coverage within the reports tab <em>cmd-9</em></figcaption>
+  <figcaption>View your projects coverage within the reports tab <kbd>cmd-9</kbd></figcaption>
 </figure>
 <figure>
   <img src="images/unit-testing-best-practices/untested-highlighting-screenshot.png" alt="Xcode untested code highlighting screenshot">
