@@ -1,3 +1,6 @@
+---
+---
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,11 +25,15 @@
 
   <main class="responsive-grid container">
 
-    <a href="unit-testing-best-practices.html" class="responsive-grid--item blog-post">
-      <img class="blog-post--image" alt="Checkbox" src="images/check-box.svg" />
-      <h2 class="blog-post--title">Unit Testing Best Practices</h2>
-      <time datetime="2019-05-31">May 31 2019</time>
+    {% for post in site.posts %}
+    <a href="{{ post.url }}" class="responsive-grid--item blog-post">
+      <img class="blog-post--image" alt="Checkbox" src="{{ post.icon-url }}" />
+      <h2 class="blog-post--title">{{ post.title }}</h2>
+      <time datetime="2019-05-31">{{ post.date }}</time>
     </a>
+    {% endfor %}
+
+    <!-- Fake Posts -->
     <a href="index.html" class="responsive-grid--item blog-post">
       <img class="blog-post--image" alt="" src="images/code-injection.svg" />
       <h2 class="blog-post--title">Dependency Injection</h2>
@@ -42,6 +49,7 @@
       <h2 class="blog-post--title">Mocking</h2>
       <time datetime="2019-06-08">June 8 2019</time>
     </a>
+    <!-- Fake Posts -->
   </main>
 </body>
 
