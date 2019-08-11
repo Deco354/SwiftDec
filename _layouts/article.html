@@ -5,9 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Unit Testing</title>
-  <link rel="stylesheet" href="../styles/styles.css">
-  <link rel="stylesheet" href="../styles/article.css">
-  <link rel="stylesheet" href="../styles/swift-code-snippet.css">
+  <link rel="stylesheet" href="/styles/styles.css">
+  <link rel="stylesheet" href="/styles/article.css">
+  <link rel="stylesheet" href="/styles/swift-code-snippet.css">
 
   <link href="https://fonts.googleapis.com/css?family=Montserrat|Playball|Playfair+Display:700" rel="stylesheet">
 </head>
@@ -17,7 +17,7 @@
   <article class="container blog-article">
     <header>
       <div class="date-stamp">
-        <time>{{ page.date }}</time> -
+        <time>{{ page.date | date_to_string }}</time> -
         <address class="author"><a rel="author" href="">{{ page.author }}</a></address>
       </div>
       <h1>{{ page.title }}</h1>

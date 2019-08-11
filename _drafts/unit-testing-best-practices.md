@@ -3,6 +3,7 @@ title: Unit Testing Best Practices
 author: Declan McKenna
 date: Jun 29th 2019
 layout: article
+icon-url: images/unit-testing-best-practices/check-box.svg
 ---
 
 When I first learnt how to unit test every tutorial I came across would show me how to write a test for a simple model and it seemed pretty straight forward.
