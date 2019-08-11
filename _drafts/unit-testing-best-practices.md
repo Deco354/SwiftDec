@@ -148,15 +148,15 @@ Using a coverage tool allows you to immediately see gaps in your testing strateg
 Xcode has a built in coverage tool which at the time of writing is not enabled by default.
 
 <figure>
-  <img src="images/unit-testing-best-practices/scheme-screenshot.png" alt="Scheme settings screenshot">
+  <img src="/images/unit-testing-best-practices/scheme-screenshot.png" alt="Scheme settings screenshot">
   <figcaption>Enable code coverage by going to your scheme -> <em>edit schemes -> Test -> Options</em> and check <em>Gather coverage</em></figcaption>
 </figure>
 <figure>
-  <img src="images/unit-testing-best-practices/coverage-screenshot.png" alt="Test coverage report screenshot">
+  <img src="/images/unit-testing-best-practices/coverage-screenshot.png" alt="Test coverage report screenshot">
   <figcaption>View your projects coverage within the reports tab <kbd>cmd-9</kbd></figcaption>
 </figure>
 <figure>
-  <img src="images/unit-testing-best-practices/untested-highlighting-screenshot.png" alt="Xcode untested code highlighting screenshot">
+  <img src="/images/unit-testing-best-practices/untested-highlighting-screenshot.png" alt="Xcode untested code highlighting screenshot">
   <figcaption>Xcode will highlight untested functions with a red margin</figcaption>
 </figure>
 ## Setup Continuous Integration
