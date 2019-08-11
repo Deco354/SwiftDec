@@ -1,0 +1,6 @@
+name: Swifty
+kramdown:
+  input: GFM
+  auto_ids: true
+  hard_wrap: false
+  syntax_highligher: rouge
