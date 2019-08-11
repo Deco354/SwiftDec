@@ -1,7 +1,9 @@
 ---
-title: Unit Testing Best Practices
-author: Declan McKenna
 layout: article
+title: Unit Testing Best Practices
+categories: [testing]
+tags: [clean, code, unit, first, coverage, fast]
+author: Declan McKenna
 icon-url: images/unit-testing-best-practices/check-box.svg
 ---
 
