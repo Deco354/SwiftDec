@@ -1,7 +1,6 @@
 ---
 title: Unit Testing Best Practices
 author: Declan McKenna
-date: Jun 29th 2019
 layout: article
 icon-url: images/unit-testing-best-practices/check-box.svg
 ---
