@@ -1,0 +1,21 @@
+<pre class="splash"><code><span class="keyword">func</span> testDay31To30DayMonthJump() {
+    <span class="keyword">let</span> addMonthResult = may31.<span class="call">addMonths</span>(<span class="number">1</span>)
+    <span class="call">XCTAssertEqual</span>(addMonthResult.<span class="property">day</span>, <span class="number">30</span>)
+    <span class="call">XCTAssertEqual</span>(addMonthResult.<span class="property">month</span>, <span class="number">6</span>)
+    <span class="call">XCTAssertEqual</span>(addMonthResult.<span class="property">year</span>, <span class="number">2019</span>)
+}
+
+<span class="keyword">func</span> test31st2MonthJumpThroughA30DayMonth() {
+    <span class="keyword">let</span> addMonthResult = may31.<span class="call">addMonths</span>(<span class="number">2</span>)
+    <span class="call">XCTAssertEqual</span>(addMonthResult.<span class="property">day</span>, <span class="number">31</span>)
+    <span class="call">XCTAssertEqual</span>(addMonthResult.<span class="property">month</span>, <span class="number">7</span>)
+    <span class="call">XCTAssertEqual</span>(addMonthResult.<span class="property">year</span>, <span class="number">2019</span>)
+}
+
+<span class="keyword">func</span> testDay30To31DayMonthJump() {
+    <span class="keyword">let</span> addMonthResult = june30.<span class="call">addMonths</span>(<span class="number">1</span>)
+    <span class="call">XCTAssertEqual</span>(addMonthResult.<span class="property">day</span>, <span class="number">30</span>)
+    <span class="call">XCTAssertEqual</span>(addMonthResult.<span class="property">month</span>, <span class="number">7</span>)
+    <span class="call">XCTAssertEqual</span>(addMonthResult.<span class="property">year</span>, <span class="number">2019</span>)
+}
+</code></pre>
