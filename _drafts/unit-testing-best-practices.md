@@ -93,53 +93,51 @@ Any repetitive setup involved in doing this can be handled by <code>setup()</cod
 private helper functions
 
 <figure>
-{% splash %}
-func testAddMonths() {
-    let may31 = SwiftyDate(day: 31, month: 5, year: 2019)
+<pre class="splash"><code><span class="keyword">func</span> testAddMonths() {
+    <span class="keyword">let</span> may31 = <span class="type">SwiftyDate</span>(day: <span class="number">31</span>, month: <span class="number">5</span>, year: <span class="number">2019</span>)
 
-    let addMonthResult = may31.addMonths(1)
-    XCTAssertEqual(addMonthResult.day, 30)
-    XCTAssertEqual(addMonthResult.month, 6)
-    XCTAssertEqual(addMonthResult.year, 2019)
+    <span class="keyword">let</span> addMonthResult = may31.<span class="call">addMonths</span>(<span class="number">1</span>)
+    <span class="call">XCTAssertEqual</span>(addMonthResult.<span class="property">day</span>, <span class="number">30</span>)
+    <span class="call">XCTAssertEqual</span>(addMonthResult.<span class="property">month</span>, <span class="number">6</span>)
+    <span class="call">XCTAssertEqual</span>(addMonthResult.<span class="property">year</span>, <span class="number">2019</span>)
 
-    let addMonthResult2 = may31.addMonth(2)
-    XCTAssertEqual(addMonthResult2.day, 31)
-    XCTAssertEqual(addMonthResult2.month, 7)
-    XCTAssertEqual(addMonthResult2.year, 2019)
+    <span class="keyword">let</span> addMonthResult2 = may31.<span class="call">addMonth</span>(<span class="number">2</span>)
+    <span class="call">XCTAssertEqual</span>(addMonthResult2.<span class="property">day</span>, <span class="number">31</span>)
+    <span class="call">XCTAssertEqual</span>(addMonthResult2.<span class="property">month</span>, <span class="number">7</span>)
+    <span class="call">XCTAssertEqual</span>(addMonthResult2.<span class="property">year</span>, <span class="number">2019</span>)
 
-    let june30 = SwiftyDate(day: 30, month: 6, year: 2019)
-    let addMonthResult3 = june30.addMonths(1)
-    XCTAssertEqual(addMonthResult3.day, 30)
-    XCTAssertEqual(addMonthResult3.month, 7)
-    XCTAssertEqual(addMonthResult3.year, 2019)
+    <span class="keyword">let</span> june30 = <span class="type">SwiftyDate</span>(day: <span class="number">30</span>, month: <span class="number">6</span>, year: <span class="number">2019</span>)
+    <span class="keyword">let</span> addMonthResult3 = june30.<span class="call">addMonths</span>(<span class="number">1</span>)
+    <span class="call">XCTAssertEqual</span>(addMonthResult3.<span class="property">day</span>, <span class="number">30</span>)
+    <span class="call">XCTAssertEqual</span>(addMonthResult3.<span class="property">month</span>, <span class="number">7</span>)
+    <span class="call">XCTAssertEqual</span>(addMonthResult3.<span class="property">year</span>, <span class="number">2019</span>)
 }
-{% endsplash %}
+</code></pre>
 <figcaption>Bad: Three different scenarios bundled in to one test</figcaption>
 </figure>
 
 <figure>
-{% splash %}
-func testDay31To30DayMonthJump() {
-    let addMonthResult = may31.addMonths(1)
-    XCTAssertEqual(addMonthResult.day, 30)
-    XCTAssertEqual(addMonthResult.month, 6)
-    XCTAssertEqual(addMonthResult.year, 2019)
+<pre class="splash"><code><span class="keyword">func</span> testDay31To30DayMonthJump() {
+    <span class="keyword">let</span> addMonthResult = may31.<span class="call">addMonths</span>(<span class="number">1</span>)
+    <span class="call">XCTAssertEqual</span>(addMonthResult.<span class="property">day</span>, <span class="number">30</span>)
+    <span class="call">XCTAssertEqual</span>(addMonthResult.<span class="property">month</span>, <span class="number">6</span>)
+    <span class="call">XCTAssertEqual</span>(addMonthResult.<span class="property">year</span>, <span class="number">2019</span>)
 }
 
-func test31st2MonthJumpThroughA30DayMonth() {
-    let addMonthResult = may31.addMonths(2)
-    XCTAssertEqual(addMonthResult.day, 31)
-    XCTAssertEqual(addMonthResult.month, 7)
-    XCTAssertEqual(addMonthResult.year, 2019)
+<span class="keyword">func</span> test31st2MonthJumpThroughA30DayMonth() {
+    <span class="keyword">let</span> addMonthResult = may31.<span class="call">addMonths</span>(<span class="number">2</span>)
+    <span class="call">XCTAssertEqual</span>(addMonthResult.<span class="property">day</span>, <span class="number">31</span>)
+    <span class="call">XCTAssertEqual</span>(addMonthResult.<span class="property">month</span>, <span class="number">7</span>)
+    <span class="call">XCTAssertEqual</span>(addMonthResult.<span class="property">year</span>, <span class="number">2019</span>)
 }
 
-func testDay30To31DayMonthJump() {
-    let addMonthResult = june30.addMonths(1)
-    XCTAssertEqual(addMonthResult.day, 30)
-    XCTAssertEqual(addMonthResult.month, 7)
-    XCTAssertEqual(addMonthResult.year, 2019)
+<span class="keyword">func</span> testDay30To31DayMonthJump() {
+    <span class="keyword">let</span> addMonthResult = june30.<span class="call">addMonths</span>(<span class="number">1</span>)
+    <span class="call">XCTAssertEqual</span>(addMonthResult.<span class="property">day</span>, <span class="number">30</span>)
+    <span class="call">XCTAssertEqual</span>(addMonthResult.<span class="property">month</span>, <span class="number">7</span>)
+    <span class="call">XCTAssertEqual</span>(addMonthResult.<span class="property">year</span>, <span class="number">2019</span>)
 }
-{% endsplash %}
+</code></pre>
 <figcaption>Good: Tests split up for different scenarios</figcaption>
 </figure>
 
