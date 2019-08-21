@@ -93,12 +93,53 @@ Any repetitive setup involved in doing this can be handled by <code>setup()</cod
 private helper functions
 
 <figure>
-{% include code-snippets/big-test.html %}
+{% splash %}
+func testAddMonths() {
+    let may31 = SwiftyDate(day: 31, month: 5, year: 2019)
+
+    let addMonthResult = may31.addMonths(1)
+    XCTAssertEqual(addMonthResult.day, 30)
+    XCTAssertEqual(addMonthResult.month, 6)
+    XCTAssertEqual(addMonthResult.year, 2019)
+
+    let addMonthResult2 = may31.addMonth(2)
+    XCTAssertEqual(addMonthResult2.day, 31)
+    XCTAssertEqual(addMonthResult2.month, 7)
+    XCTAssertEqual(addMonthResult2.year, 2019)
+
+    let june30 = SwiftyDate(day: 30, month: 6, year: 2019)
+    let addMonthResult3 = june30.addMonths(1)
+    XCTAssertEqual(addMonthResult3.day, 30)
+    XCTAssertEqual(addMonthResult3.month, 7)
+    XCTAssertEqual(addMonthResult3.year, 2019)
+}
+{% endsplash %}
 <figcaption>Bad: Three different scenarios bundled in to one test</figcaption>
 </figure>
 
 <figure>
-{% include code-snippets/small-tests.html %}
+{% splash %}
+func testDay31To30DayMonthJump() {
+    let addMonthResult = may31.addMonths(1)
+    XCTAssertEqual(addMonthResult.day, 30)
+    XCTAssertEqual(addMonthResult.month, 6)
+    XCTAssertEqual(addMonthResult.year, 2019)
+}
+
+func test31st2MonthJumpThroughA30DayMonth() {
+    let addMonthResult = may31.addMonths(2)
+    XCTAssertEqual(addMonthResult.day, 31)
+    XCTAssertEqual(addMonthResult.month, 7)
+    XCTAssertEqual(addMonthResult.year, 2019)
+}
+
+func testDay30To31DayMonthJump() {
+    let addMonthResult = june30.addMonths(1)
+    XCTAssertEqual(addMonthResult.day, 30)
+    XCTAssertEqual(addMonthResult.month, 7)
+    XCTAssertEqual(addMonthResult.year, 2019)
+}
+{% endsplash %}
 <figcaption>Good: Tests split up for different scenarios</figcaption>
 </figure>
 
