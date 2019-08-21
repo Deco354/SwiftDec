@@ -27,6 +27,7 @@ h1, h2, h3, h4 {
   background-color: tomato;
   color: white;
   text-align: center;
+  padding-top: 1.6rem;
   padding-bottom: 1.6rem;
   width: 100%;
 }
@@ -44,7 +45,7 @@ h1, h2, h3, h4 {
 .logo {
   font-family: "Playball", cursive;
   font-size: 6.4rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.6rem;
 }
 
 .container {
