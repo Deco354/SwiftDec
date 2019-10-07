@@ -43,9 +43,19 @@ h1, h2, h3, h4 {
 }
 
 .logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.6rem;
+}
+
+.logo__text {
   font-family: "Playball", cursive;
   font-size: 6.4rem;
-  margin-bottom: 1.6rem;
+  margin-right: 1.6rem;
+}
+
+.logo__image {
+  height: 6.4rem;
 }
 
 .container {
