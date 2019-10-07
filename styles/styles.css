@@ -43,9 +43,20 @@ h1, h2, h3, h4 {
 }
 
 .logo {
-  font-family: "Playball", cursive;
-  font-size: 6.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 1.6rem;
+}
+
+.logo__text {
+  font-family: 'Rock Salt', cursive;
+  font-size: 3.6rem;
+  margin-right: 1.6rem;
+}
+
+.logo__image {
+  height: 6.4rem;
 }
 
 .container {

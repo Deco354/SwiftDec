@@ -58,7 +58,7 @@ figcaption {
   text-align: center;
 }
 
-img {
+img .article {
   display: block;
   max-width: 100%;
   height: auto;
