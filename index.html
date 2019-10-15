@@ -17,7 +17,6 @@
 <body>
   {% include header.html %}
   <main class="responsive-grid container">
-
     {% for post in site.posts %}
     <a href="{{ post.url }}" class="responsive-grid--item blog-post">
       <img class="blog-post--image" alt="Checkbox" src="{{ post.icon-url }}" />
@@ -25,24 +24,6 @@
       <time datetime="{{ post.date }}">{{ post.date | date_to_string }}</time>
     </a>
     {% endfor %}
-
-    <!-- Fake Posts -->
-    <a href="index.html" class="responsive-grid--item blog-post">
-      <img class="blog-post--image" alt="" src="images/code-injection.svg" />
-      <h2 class="blog-post--title">Dependency Injection</h2>
-      <time datetime="2019-06-03">June 3 2019</time>
-    </a>
-    <a href="index.html" class="responsive-grid--item blog-post">
-      <img class="blog-post--image" alt="" src="images/boxed-hexagon.svg" />
-      <h2 class="blog-post--title">The Open/Closed Principle</h2>
-      <time datetime="2019-06-03">June 3 2019</time>
-    </a>
-    <a href="index.html" class="responsive-grid--item blog-post">
-      <img class="blog-post--image" alt="" src="images/replacement.svg" />
-      <h2 class="blog-post--title">Mocking</h2>
-      <time datetime="2019-06-08">June 8 2019</time>
-    </a>
-    <!-- Fake Posts -->
   </main>
 </body>
 
