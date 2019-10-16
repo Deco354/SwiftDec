@@ -10,7 +10,7 @@
   text-decoration: none;
 }
 
-.article-item--image {
+.article-item__image {
   grid-column: 1;
   grid-row: 1 / span 2;
   overflow: hidden;
@@ -18,7 +18,7 @@
   width: 100%;
 }
 
-.article-item--title {
+.article-item__title {
   font-family: "Playfair Display", serif;
   letter-spacing: .5px;
   grid-column: 2;
