@@ -18,9 +18,9 @@
   {% include header.html %}
   <main class="responsive-grid container">
     {% for post in site.posts %}
-    <a href="{{ post.url }}" class="responsive-grid--item blog-post">
-      <img class="blog-post--image" alt="Checkbox" src="{{ post.icon-url }}" />
-      <h2 class="blog-post--title">{{ post.title }}</h2>
+    <a href="{{ post.url }}" class="responsive-grid--item article-item">
+      <img class="article-item--image" alt="Checkbox" src="{{ post.icon-url }}" />
+      <h2 class="article-item--title">{{ post.title }}</h2>
       <time datetime="{{ post.date }}">{{ post.date | date_to_string }}</time>
     </a>
     {% endfor %}
