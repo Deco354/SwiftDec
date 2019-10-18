@@ -80,7 +80,7 @@ blockquote footer {
   margin-top: 1em;
 }
 
-.container pre {
+.container .splash {
   width: 100%;
   font-size: 2.45vw;
 }
