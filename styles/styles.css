@@ -32,12 +32,12 @@ h1, h2, h3, h4 {
   width: 100%;
 }
 
-.site-header a {
+.site-header__link {
   color: inherit;
   text-decoration: none;
 }
 
-.site-header--description {
+.site-header__description {
   font-family: "Montserrat", sans-serif;
   font-size: 1.6rem;
 }
