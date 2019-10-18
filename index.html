@@ -21,7 +21,7 @@
     <a href="{{ post.url }}" class="responsive-grid__item article-item">
       <img class="article-item__image" alt="Checkbox" src="{{ post.icon-url }}" />
       <h2 class="article-item__title">{{ post.title }}</h2>
-      <time datetime="{{ post.date }}">{{ post.date | date_to_string }}</time>
+      <time class="article-item__publication-date" datetime="{{ post.date }}">{{ post.date | date_to_string }}</time>
     </a>
     {% endfor %}
   </main>
