@@ -1,4 +1,5 @@
 name: Swift Dec
+include: [_headers]
 kramdown:
   input: GFM
   auto_ids: true
