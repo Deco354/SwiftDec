@@ -4,4 +4,5 @@ X-XSS-Protection: 1; mode=block
 Referrer-Policy: no-referrer
 X-Content-Type-Options: nosniff
 Content-Security-Policy: default-src 'self'
-Content-Security-Policy: font-src https://fonts.googleapis.com*
+Content-Security-Policy: font-src https://fonts.gstatic.com
+Content-Security-Policy: style-src https://fonts.googleapis.com
