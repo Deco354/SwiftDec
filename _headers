@@ -5,4 +5,4 @@ Referrer-Policy: no-referrer
 X-Content-Type-Options: nosniff
 Content-Security-Policy: default-src 'self'
 Content-Security-Policy: font-src 'self' https://fonts.gstatic.com
-Content-Security-Policy: style-src 'self' https://fonts.googleapis.com
+Content-Security-Policy: style-src-elem 'self' https://fonts.googleapis.com
