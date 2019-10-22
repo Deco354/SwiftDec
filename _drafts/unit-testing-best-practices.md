@@ -124,13 +124,13 @@ if the tests failed.
 This is a vital tool to have as without it it’s possible to merge branches with failing tests.
 If tests can be ignored then there’s no point in having them.
 
-## Test Behaviours rather than functions
+## Test Behaviors rather than functions
 Just because a function has test coverage doesn't mean it's fully tested.
 Push your code to the limit and write tests for every edge case you can think of. It's better to have too many tests than too few.
 
 The date tests above are a good example of this.
 One test for `addMonths()` will satisfy code coverage tools that the function is tested but there is
-far more behaviour to be tested. For example what date do we land on when we add one month to January 30th?
+far more behavior to be tested. For example what date do we land on when we add one month to January 30th?
 
 ## Conclusion
 Testing isn’t as straight forward as most tutorials will tell you, this article doesn’t come close to covering all

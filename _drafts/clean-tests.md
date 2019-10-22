@@ -26,7 +26,7 @@ Smaller tests are easier to read and give clearer failure results.
 A tests failure should ideally be identifiable by its name and not require the user to dive deep in to the test code.
 
 Any repetitive setup involved in doing this should be handled by <code>setup()</code>, instance variables or
-private helper functions
+private helper functions.
 
 <figure>
 {% include code-snippets/big-test.html %}
