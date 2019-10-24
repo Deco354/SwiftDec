@@ -15,7 +15,7 @@ We want to run our tests regularly and often by smashing <kbd>cmd U</kbd> whenev
 For this to work we need our tests to be fast.
 How fast is fast? We’re going to be writing a lot of tests so at the very minimum **a test should run in less than 0.1 seconds.**
 
-You can see how fast your tests are by going to XCode's report manager tab (<kbd>cmd 9</kbd>) and clicking on your last test's report.
+You can see how fast your tests are by going to Xcode's report manager tab (<kbd>cmd 9</kbd>) and clicking on your last test's report.
 
 <figure>
   <img src="/images/first/xcode-test-report.png" alt="Xcode test report screenshot">
@@ -50,4 +50,4 @@ One large test function that tests many cases and puts them in to a log can be e
 
 ## Timely
 Write tests with all code you commit.
-If you do it afterwards your production code may be difficult to test especially once more functionality is added to it
+If you do it afterwards your production code may be difficult to test especially once more functionality is added to it.

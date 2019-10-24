@@ -33,7 +33,7 @@ Push your code to the limit and write tests for every edge case you can think of
 
 Let's take an example from a previous post where we have an `addMonths(_: Int)` function that adds a month to the current date.
 One test that calls `addMonths` will satisfy code coverage tools that the function is tested but there is
-far more behaviour to be tested than just calling this function once.
+far more behavior to be tested than just calling this function once.
 
 Rather than just test the function addMonth() we should be testing
 * Adding a month on the 30th January gives us February 28th
