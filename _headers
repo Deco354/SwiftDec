@@ -3,4 +3,4 @@ X-Frame-Options: DENY
 X-XSS-Protection: 1; mode=block
 Referrer-Policy: no-referrer
 X-Content-Type-Options: nosniff
-Content-Security-Policy: default-src 'self'; font-src 'self' https://fonts.gstatic.com; style-src 'self' https://fonts.googleapis.com;
+Content-Security-Policy: default-src 'self'; font-src 'self' https://fonts.gstatic.com; style-src 'self' https://fonts.googleapis.com http://*.cloudfront.net; img-src https: data:;
