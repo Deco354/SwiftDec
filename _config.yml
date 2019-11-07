@@ -1,5 +1,6 @@
 name: Swift Dec
 include: [_headers]
+description: Swift and Xcode Microblogs and Tips
 kramdown:
   input: GFM
   auto_ids: true
