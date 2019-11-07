@@ -5,6 +5,7 @@ categories: [testing]
 tags: [clean, code, unit, coverage]
 author: Declan McKenna
 icon-url: images/test-coverage/percentage-monitor.svg
+description: How to setup Xcode test coverage and the caveats of test coverage
 ---
 
 ## How to get test coverage on Xcode?

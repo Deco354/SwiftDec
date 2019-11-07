@@ -5,6 +5,7 @@ categories: [testing]
 tags: [clean, code, unit, first, fast, uncle, bob]
 author: Declan McKenna
 icon-url: images/clean-tests/clean-screen.svg
+description: Is it better to have a bigger test that covers all cases or lots of smaller ones?
 ---
 
 ## The Dual Standard

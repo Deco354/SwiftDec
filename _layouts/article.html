@@ -3,6 +3,7 @@
 
 <head>
   <title>{{ page.title }}</title>
+  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
   <link rel="stylesheet" href="/styles/styles.css">
   <link rel="stylesheet" href="/styles/article.css">
   <link rel="stylesheet" href="/styles/swift-code-snippet.css">
