@@ -2,10 +2,15 @@
 layout: article
 title: Clean Tests
 categories: [testing]
-tags: [clean, code, unit, first, fast, uncle, bob]
 author: Declan McKenna
 icon-url: images/clean-tests/clean-screen.svg
 description: Is it better to have a bigger test that covers all cases or lots of smaller ones?
+keywords:
+  - clean code
+  - clean swift
+  - smaller tests
+  - XCTest
+  - test one concept per test function
 ---
 
 ## The Dual Standard

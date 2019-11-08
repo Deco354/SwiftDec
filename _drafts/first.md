@@ -2,10 +2,15 @@
 layout: article
 title: F.I.R.S.T Testing
 categories: [testing]
-tags: [clean, code, unit, first, fast, uncle, bob]
 author: Declan McKenna
 icon-url: images/first/1st-medal.svg
 description: Fast . Independent . Repeatable . Self-Validating . Timely
+keywords:
+  - clean code
+  - clean swift
+  - clean tests
+  - How fast should my tests be?
+  - How to measure how fast my tests are?
 ---
 
 F.I.R.S.T is a widely used acronym for good testing practices.
