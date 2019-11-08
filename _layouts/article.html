@@ -5,6 +5,7 @@
   <title>{{ page.title }}</title>
   <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
   {% if page.keywords %}<meta name="keywords" content="{{ page.keywords | join: ', ' | escape }}">{% endif %}
+  <meta name="author" content="{{ page.author }}">
   <link rel="stylesheet" href="/styles/styles.css">
   <link rel="stylesheet" href="/styles/article.css">
   <link rel="stylesheet" href="/styles/swift-code-snippet.css">
