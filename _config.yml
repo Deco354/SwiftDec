@@ -1,5 +1,5 @@
 name: Swift Dec
-include: [_headers]
+include: [_headers, _redirects]
 description: Swift and Xcode Microblogs and Tips
 kramdown:
   input: GFM
